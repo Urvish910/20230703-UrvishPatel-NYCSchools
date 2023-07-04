@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.example.a20230703_urvishpatel_nycschools.model.remote.response.SatResponseItem" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp"
+        tools:context=".view.SATschoolActivity"
+        android:background="#CDC153">
+
+        <TextView
+            android:id="@+id/tv_schoolName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:fontFamily="monospace"
+            android:text='@{"School: "+ data.school_name}'
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/tv_reading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text='@{"Reading AVG Score: "+ data.sat_critical_reading_avg_score}'
+            android:textSize="18sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/tv_writing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text='@{"Writing AVG Score: "+ data.sat_writing_avg_score}'
+            android:textSize="18sp"
+            android:textStyle="normal"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_math"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            android:text='@{"Math AVG Score: "+ data.sat_math_avg_score}'
+            />
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/pb_check"
+            android:visibility="gone"/>
+
+
+    </LinearLayout>
+</layout>
