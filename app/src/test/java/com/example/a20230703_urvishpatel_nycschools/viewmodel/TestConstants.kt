@@ -1,7 +1,8 @@
 package com.example.a20230703_urvishpatel_nycschools.viewmodel
 
 object TestConstants {
-        const val getallSchoolResponse = """
+        const val getallSchoolResponse =
+                """
         [
     {
         "dbn": "02M260",
